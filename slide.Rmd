@@ -1,0 +1,29 @@
+---
+title: "Developing Data Products - Markdown and Leaflet"
+author: "BEN ABBOU Mouhsine"
+date: "02/11/2020"
+output: ioslides_presentation
+---
+
+## My map
+
+**Novembre 02, 2020**
+
+```{r , echo=TRUE}
+library(leaflet)
+my_map <- leaflet() %>% 
+      addTiles()
+
+```
+
+##
+Create a link to the National Institut of Postes and Telecommunications, which we could get relevant information.
+
+```{r , echo=TRUE}
+NIPT <- c("https://www.google.com/search?q=inpt&rlz=1C1DIMC_enMA859MA859&oq=inpt&aqs=chrome.0.69i59j0l4j69i60l3.3827j0j7&sourceid=chrome&ie=UTF-8")
+leaflet() %>%
+addTiles() %>%
+addMarkers(lat=33.9791118, lng=-6.8687922, popup = NIPT)
+```
+```
+,,17z
